@@ -1,1285 +1,966 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- SEO + Social -->
-<meta name="description" content="Tech services done in 24 hours. Funnels, Websites, AI bots & more by Tejas Barguje.">
-<meta property="og:title" content="Tejas Barguje | 24-Hour Tech Solutions">
-<meta property="og:description" content="Launch your idea in 24 hours with AI + Human-powered delivery.">
- <meta property="og:image" content="https://tejasbargujepatilcom.vercel.app/">
-<meta property="og:type" content="website"> 
-<meta name="twitter:card" content="summary_large_image">
- <meta name="description" content="24-Hour Tech Services: Web Development, AI Solutions & Cybersecurity by Tejas Barguje. Fast turnaround & premium quality.">
-  <meta name="keywords" content="24-hour web development, AI-powered solutions, cybersecurity audits, full stack development, startup tech consulting, fast tech services">
-  <meta name="author" content="Tejas Barguje">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://brotherslegacy.netlify.app/">
-  <meta property="og:title" content="Tejas Barguje | 24-Hour Tech Solutions">
-  <meta property="og:description" content="Launch your idea in 24 hours with AI + Human-powered delivery.">
-
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Tejas Barguje",
-    "jobTitle": "Full Stack Developer & Tech Consultant, Ethical Hacker, web developer, photographer",
-    "skills": "Web Development, AI Solutions, Cybersecurity, Automation",
-    "url": "https://brotherslegacy.netlify.app/",
-    "sameAs": [
-      "https://github.com/tejasbargujepatil",
-      "https://x.com/tejas_barguje",
-      "https://www.linkedin.com/in/tejas-cybersecurityanalyst-/"
-    ]
-  }
-  </script>
-
-  <title>Tejas Barguje | 24-Hour Tech Solutions</title>
-  
-  
-  <!-- Preload Assets -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" as="style">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
-  
-  <!-- Fonts & Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-  
-<!-- Add Font Awesome CSS for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  
-    <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-  
-  <!-- AOS Animate on Scroll -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tejas S Barguje Patil — Founder · Hacker · Builder</title>
+  <meta name="description" content="Tejas Barguje Patil — AgriTech founder, cybersecurity engineer, and cloud builder from Pune, India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-       * { 
-      margin: 0; 
-      padding: 0; 
-      box-sizing: border-box; 
-      scroll-behavior: smooth; 
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --gradient-1: linear-gradient(195deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-      --gradient-2: linear-gradient(135deg, #1e3a8a, #2563eb);
+      --forest:   #0D2818;
+      --lime:     #A8FF3E;
+      --lime-dim: #6DBF1F;
+      --bg:       #0A0A0A;
+      --surface:  #111811;
+      --card:     #121912;
+      --off-white:#F0EDE4;
+      --muted:    #7A8C7A;
+      --clay:     #8B7355;
+      --text:     #D8D5CC;
+      --border:   rgba(168,255,62,0.12);
     }
 
-    body { 
-      font-family: 'Poppins', sans-serif; 
-      background: #0f172a; 
-      color: #f8fafc; 
-      line-height: 1.6; 
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    a { 
-      text-decoration: none; 
-      color: inherit; 
-      transition: color 0.3s ease;
-    }
-
-    /* Enhanced Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(15, 23, 42, 0.95) !important;
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      z-index: 999;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    nav a {
-      position: relative;
-      padding: 0.5rem 1rem;
-      transition: all 0.3s ease;
-    }
-
-    nav a::after {
+    /* ── NOISE OVERLAY ── */
+    body::before {
       content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(10,10,10,0.7);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: var(--lime);
+      letter-spacing: 0.05em;
+    }
+    .nav-logo span { color: var(--muted); }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--lime); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 120px 48px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid-bg {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(168,255,62,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168,255,62,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .hero-glow {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #3b82f6;
-      transition: width 0.3s ease;
+      top: -200px; left: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(13,40,24,0.8) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 900px; }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(168,255,62,0.08);
+      border: 1px solid rgba(168,255,62,0.2);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--lime);
+      margin-bottom: 40px;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--lime);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
     }
 
-    nav a:hover::after {
-      width: 100%;
+    .hero-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(52px, 8vw, 96px);
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      color: var(--off-white);
+      margin-bottom: 24px;
+    }
+    .hero-name .accent { color: var(--lime); }
+
+    .hero-tagline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(16px, 2.5vw, 22px);
+      color: var(--muted);
+      margin-bottom: 48px;
+      min-height: 1.5em;
+    }
+    .hero-tagline .cursor {
+      display: inline-block;
+      width: 2px; height: 1.1em;
+      background: var(--lime);
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    .hero-desc {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 52px;
+    }
+    .hero-desc strong { color: var(--text); font-weight: 500; }
+
+    .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 28px;
+      border-radius: 6px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--lime);
+      color: #0A0A0A;
+      border: none;
+    }
+    .btn-primary:hover { background: #C4FF60; transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .btn-ghost:hover { border-color: var(--lime); color: var(--lime); }
+
+    .hero-stats {
+      display: flex; gap: 48px;
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+    .stat-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--off-white);
+    }
+    .stat-num .unit { color: var(--lime); font-size: 22px; }
+    .stat-label { font-size: 12px; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; margin-top: 2px; }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 100px 48px; position: relative; }
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--lime);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .section-label::before { content: '// '; }
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 700;
+      color: var(--off-white);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 64px;
     }
 
-    header {
+    /* ── ABOUT ── */
+    #about { background: var(--surface); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      max-width: 1100px;
+    }
+    .about-text p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .about-text p strong { color: var(--text); }
+    .about-text p .hl { color: var(--lime); }
+
+    .about-facts {
       display: flex;
       flex-direction: column;
+      gap: 24px;
+    }
+    .fact-row {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 20px;
+      background: rgba(168,255,62,0.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .fact-icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: rgba(168,255,62,0.1);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+    }
+    .fact-body .fact-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px; font-weight: 600;
+      color: var(--off-white);
+      margin-bottom: 3px;
+    }
+    .fact-body .fact-detail { font-size: 13px; color: var(--muted); }
+
+    /* ── STARTUPS ── */
+    #startups { background: var(--bg); }
+    .startups-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 1100px;
+    }
+    .startup-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px;
+      transition: border-color 0.25s, transform 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .startup-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--lime), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .startup-card:hover { border-color: rgba(168,255,62,0.3); transform: translateY(-3px); }
+    .startup-card:hover::before { opacity: 1; }
+
+    .startup-emoji { font-size: 32px; margin-bottom: 20px; display: block; }
+    .startup-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px; font-weight: 700;
+      color: var(--off-white);
+      margin-bottom: 4px;
+    }
+    .startup-type {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--lime);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .startup-desc { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 24px; }
+    .startup-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      padding: 4px 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--muted);
+    }
+    .startup-card.featured { grid-column: span 2; }
+    .startup-card.featured .startup-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+    }
+
+    /* ── PROJECTS ── */
+    #projects { background: var(--surface); }
+    .projects-list { display: flex; flex-direction: column; gap: 1px; max-width: 1100px; }
+    .project-row {
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background: var(--gradient-2);
+      gap: 32px;
+      padding: 28px 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .project-row:hover { background: rgba(168,255,62,0.04); border-color: rgba(168,255,62,0.25); }
+    .project-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: rgba(168,255,62,0.4);
+    }
+    .project-info .project-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px; font-weight: 600;
+      color: var(--off-white);
+      margin-bottom: 4px;
+    }
+    .project-info .project-brief {
+      font-size: 13px; color: var(--muted);
+    }
+    .project-stack { display: flex; gap: 8px; }
+    .stack-badge {
+      padding: 3px 9px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(168,255,62,0.08);
+      color: var(--lime-dim);
+      border: 1px solid rgba(168,255,62,0.15);
+    }
+
+    /* ── SKILLS ── */
+    #skills { background: var(--bg); }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      max-width: 1100px;
+    }
+    .skill-group {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .skill-group-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px; font-weight: 600;
+      color: var(--lime);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .skill-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      padding: 5px 11px;
+      border-radius: 4px;
+      font-size: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      color: var(--muted);
+      transition: all 0.15s;
+    }
+    .chip:hover { background: rgba(168,255,62,0.07); border-color: rgba(168,255,62,0.2); color: var(--text); }
+
+    /* ── CERTS ── */
+    #certs { background: var(--surface); }
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      max-width: 1100px;
+    }
+    .cert-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .cert-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      border-radius: 8px;
+      background: rgba(168,255,62,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .cert-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px; font-weight: 600;
+      color: var(--off-white);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .cert-issuer { font-size: 12px; color: var(--muted); }
+
+    /* ── CONTACT ── */
+    #contact {
+      background: var(--bg);
       text-align: center;
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
     }
-
-    header::after {
-      content: '';
-      position: absolute;
-      bottom: -50px;
-      left: -10%;
-      width: 120%;
-      height: 100px;
-      background: #0f172a;
-      transform: rotate(-3deg);
-      z-index: 1;
+    .contact-inner { max-width: 600px; margin: 0 auto; }
+    .contact-email {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(18px, 3vw, 28px);
+      color: var(--lime);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(168,255,62,0.3);
+      padding-bottom: 4px;
+      margin: 32px 0 48px;
+      transition: border-color 0.2s;
     }
-
-    header h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      animation: fadeIn 2s ease forwards;
-    }
-
-    header p {
-      margin-top: 1rem;
-      font-size: 1.3rem;
-      opacity: 0.8;
-      animation: fadeIn 2.5s ease forwards;
-    }
-
-    /* Enhanced Card Design */
-    .card {
-      background: #1e293b;
-      padding: 2rem;
-      border-radius: 1rem;
-      transition: transform 0.3s ease, background 0.3s ease;
-      position: relative;
-      overflow: hidden;
+    .contact-email:hover { border-color: var(--lime); }
+    .social-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .social-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px;
+      border-radius: 6px;
       border: 1px solid rgba(255,255,255,0.1);
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px; font-weight: 500;
+      transition: all 0.2s;
+    }
+    .social-btn:hover { border-color: var(--lime); color: var(--lime); background: rgba(168,255,62,0.05); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 28px 48px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-copy {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; color: var(--muted);
+    }
+    .footer-made {
+      font-size: 12px; color: var(--muted);
+    }
+    .footer-made span { color: var(--lime); }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 48px; height: 2px;
+      background: var(--lime);
+      margin-bottom: 48px;
+      border-radius: 2px;
     }
 
-    .card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: var(--gradient-1);
-      opacity: 0.1;
-      z-index: 0;
-      transition: transform 0.5s ease;
+    /* ── SCROLL ANIMATIONS ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
+    .reveal.visible { opacity: 1; transform: none; }
 
-    .card:hover::before {
-      transform: rotate(15deg);
-    }
-
-    .card:hover {
-      background: #334155;
-      transform: translateY(-5px);
-    }
-
-    /* Gradient Text */
-    .gradient-text {
-      background: var(--gradient-1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* Project Image Enhancements */
-    .project-image {
-      position: relative;
-      height: 250px;
-      overflow: hidden;
-    }
-
-    .project-image::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,0.8) 100%);
-    }
-
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    /* Accessibility */
-    :focus {
-      outline: 2px solid #3b82f6;
-      outline-offset: 2px;
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      section { padding: 72px 24px; }
+      #hero { padding: 100px 24px 60px; }
+      .about-grid,
+      .startups-grid,
+      .startup-card.featured .startup-inner { grid-template-columns: 1fr; gap: 40px; }
+      .startup-card.featured { grid-column: span 1; }
+      .hero-stats { gap: 28px; flex-wrap: wrap; }
+      footer { flex-direction: column; gap: 8px; text-align: center; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * {
-        animation: none !important;
-        transition: none !important;
-      }
+      .reveal { opacity: 1; transform: none; }
+      .hero-tag::before { animation: none; }
+      .cursor { animation: none; }
     }
-
-    header {
-      background: var(--gradient-1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    header::after {
-      content: '';
-      position: absolute;
-      bottom: -50px;
-      left: -10%;
-      width: 120%;
-      height: 100px;
-      background: #0f172a;
-      transform: rotate(-3deg);
-      z-index: 1;
-    }
-    
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      text-align: center;
-      padding: 2rem;
-    }
-    
-    header h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      animation: fadeIn 2s ease forwards;
-    }
-    
-    header p {
-      margin-top: 1rem;
-      font-size: 1.3rem;
-      opacity: 0.8;
-      animation: fadeIn 2.5s ease forwards;
-    }
-    
-    .hero-btn {
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      background: #3b82f6;
-      color: white;
-      font-weight: 600;
-      border-radius: 50px;
-      transition: background 0.3s ease;
-    }
-    
-    .hero-btn:hover {
-      background: #2563eb;
-    }
-    
-    section {
-      padding: 5rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    
-    .services, .cta, .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    
-    .card {
-      background: #1e293b;
-      padding: 2rem;
-      border-radius: 1rem;
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-    
-    .card:hover {
-      background: #334155;
-      transform: translateY(-5px);
-    }
-    
-    h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-    }
-    
-    h3 {
-      color: #93c5fd;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-    
-    .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: #3b82f6;
-      color: white;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    
-    .btn:hover {
-      background: #2563eb;
-    }
-
-    
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      opacity: 0.6;
-      margin-top: 4rem;
-    }
-
-    .big-headline {
-      font-size: 2.8rem;
-      font-weight: 800;
-      color: #facc15;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .subheadline {
-      font-size: 1.5rem;
-      color: #e0e7ff;
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .feature {
-      background: #1e293b;
-      padding: 2rem;
-      border-radius: 1rem;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .feature:hover {
-      background: #334155;
-      transform: scale(1.02);
-    }
-
-    blockquote {
-      background: #1e293b;
-      padding: 2rem;
-      border-left: 5px solid #3b82f6;
-      margin: 2rem 0;
-      border-radius: 1rem;
-      font-style: italic;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    [data-aos-delay] {
-      transition-delay: 0.3s;
-    }
-
-    /* --- Calendly Section Styles --- */
-    .calendly-inline-widget {
-      min-width: 320px;
-      height: 700px;
-    }
-    footer {
-    text-align: center;
-    padding: 3rem 2rem;
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-top: 4rem;
-    background: #1e293b;
-  }
-
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .social-links a {
-    font-size: 1.5rem;
-    color: #f8fafc;
-    transition: all 0.3s ease;
-  }
-
-  .social-links a:hover {
-    color: #3b82f6;
-    transform: translateY(-3px);
-  }
-
-  @media (max-width: 600px) {
-    .social-links {
-      gap: 1.5rem;
-    }
-    
-    .social-links a {
-      font-size: 1.2rem;
-    }
-  }
-  #projects {
-    padding: 5rem 2rem;
-    background: #0f172a;
-  }
-
-  .projects-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .project-card {
-    background: #1e293b;
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-
-  .project-card:hover {
-    transform: translateY(-5px);
-  }
-
-  .project-image {
-    height: 250px;
-    overflow: hidden;
-  }
-
-  .project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-
-  .project-card:hover img {
-    transform: scale(1.05);
-  }
-
-  .project-content {
-    padding: 1.5rem;
-  }
-
-  .project-content h3 {
-    color: #facc15;
-    margin-bottom: 0.75rem;
-    font-size: 1.25rem;
-  }
-
-  .project-content p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-bottom: 1rem;
-  }
-
-  .project-tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-  }
-
-  .project-tags span {
-    background: #334155;
-    color: #93c5fd;
-    padding: 0.25rem 0.75rem;
-    border-radius: 50px;
-    font-size: 0.75rem;
-  }
-
-  .project-link {
-    color: #3b82f6;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
-  }
-
-  .project-link:hover {
-    color: #60a5fa;
-  }
-
-  @media (max-width: 768px) {
-    .projects-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .project-image {
-      height: 200px;
-    }
-  }
-  
-
-  .projects-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    padding: 0 1rem;
-  }
-
-  .project-card {
-    margin: 0 auto;
-    max-width: 400px;
-  }
-
-  .project-image {
-    height: 200px;
-  }
-/* Existing styles remain unchanged */
-
-/* ================== */
-/* Media Queries Start */
-/* ================== */
-
-@media (max-width: 1200px) {
-  section {
-    padding: 4rem 2rem;
-  }
-  
-  header h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 992px) {
-  nav {
-    padding: 1rem;
-    gap: 1.5rem;
-  }
-  
-  .big-headline {
-    font-size: 2.2rem;
-  }
-  
-  .subheadline {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Navigation */
-  nav {
-    padding: 0.75rem 1rem;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  nav a {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
-
-  /* Header */
-  header {
-    padding: 2rem 1rem;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-  }
-  
-  header p {
-    font-size: 1.1rem;
-  }
-  
-  header::after {
-    bottom: -30px;
-    height: 60px;
-  }
-
-  /* Sections */
-  section {
-    padding: 3rem 1rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  /* Cards */
-  .card {
-    padding: 1.5rem;
-  }
-
-  /* Projects */
-  .project-image {
-    height: 200px;
-  }
-}
-
-@media (max-width: 576px) {
-  /* Header */
-  header h1 {
-    font-size: 2rem;
-  }
-  
-  header p {
-    font-size: 1rem;
-  }
-  
-  .hero-btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  /* Typography */
-  .big-headline {
-    font-size: 1.8rem;
-  }
-  
-  .subheadline {
-    font-size: 1.1rem;
-  }
-
-  /* Grid Systems */
-  .services, .cta, .features-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  /* Projects */
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .project-content h3 {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 400px) {
-  /* Navigation */
-  nav {
-    gap: 0.75rem;
-  }
-  
-  nav a {
-    font-size: 0.8rem;
-  }
-
-  /* Header */
-  header h1 {
-    font-size: 1.75rem;
-  }
-  
-  header::after {
-    transform: rotate(-4deg);
-  }
-
-  /* Projects */
-  .project-image {
-    height: 180px;
-  }
-  
-  .project-tags span {
-    font-size: 0.65rem;
-  }
-}
-
-/* Touch Device Optimization */
-@media (hover: none) {
-  .card:hover {
-    transform: none;
-    background: #1e293b;
-  }
-  
-  .project-card:hover {
-    transform: none;
-  }
-  
-  .project-card:hover img {
-    transform: none;
-  }
-}
-
-/* Landscape Orientation */
-@media (max-height: 500px) and (orientation: landscape) {
-  header {
-    min-height: 150vh;
-    padding-top: 4rem;
-  }
-}
-
-/* ================ */
-/* Media Queries End */
-/* ================ */
-
-/* Existing remaining styles remain unchanged */
-  
- 
-
-  
-    
- 
-  
-  
-
   </style>
 </head>
-
 <body>
 
-<header>
-<nav style="position: fixed; top: 0; left: 0; width: 100%; background: #0f172a; z-index: 999; padding: 1rem 2rem; display: flex; justify-content: center; gap: 2rem;">
-  <a href="#offer">Offer</a>
-  <a href="#services">Services</a>
-  <a href="#why">Why Me</a>
-  <a href="#build">Build</a>
-  <a href="#projects">Projects</a>
-  <a href="#claim">Book</a>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Tejas<span>@portfolio</span> ~$</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#startups">Startups</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-<h1 data-aos="fade-down">Tejas Barguje</h1>
-  <p data-aos="fade-up">Turning Ideas into Tech-Powered Realities.</p>
-  <a href="#claim" class="hero-btn" data-aos="zoom-in">Work With Me</a>
-</header>
-
-<section id="offer">
-  <div class="big-headline" data-aos="fade-up">Get Your Website, Funnel, or Automation DONE in 24 Hours — Fast. Clean. Profitable.</div>
-  <div class="subheadline" data-aos="fade-up">No Overpriced Agencies. No Delays. Just Pure Results in 1 Day.<br> Done by Human Expertise + AI Precision.</div>
-</section>
-
-<section id="services">
-  <h2 data-aos="fade-up">My Expertise</h2>
-  <div class="services">
-    <div class="card" data-aos="fade-up" data-aos-delay="100">
-      <h3>Web Development & Funnels</h3>
-      <p>Lightning-fast websites, landing pages, and high-converting funnels powered by AI tools and modern tech stacks.</p>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Available for collaborations &amp; projects</div>
+    <h1 class="hero-name">
+      Tejas<br /><span class="accent">Barguje</span>
+    </h1>
+    <div class="hero-tagline">
+      <span id="typewriter"></span><span class="cursor"></span>
     </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="200">
-      <h3>Cybersecurity Audits</h3>
-      <p>Fortify your business with top-tier cybersecurity practices, vulnerability scanning, and proactive threat mitigation.</p>
+    <p class="hero-desc">
+      <strong>Founder-engineer from a farming village in Maharashtra</strong>, building AI systems that put <span style="color:var(--lime)">intelligence back in farmers' hands.</span> I also break things for a living — ethically — and architect cloud infrastructure that doesn't wake you up at 3 AM.
+    </p>
+    <div class="hero-cta">
+      <a href="#startups" class="btn btn-primary">↓ My Startups</a>
+      <a href="https://github.com/tejasbargujepatil" target="_blank" rel="noopener" class="btn btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/tejasbarguje/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
     </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="300">
-      <h3>Full Stack Engineering</h3>
-      <p>Custom scalable web applications using Java Spring Boot, REST APIs, PHP integrations, and responsive frontends.</p>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="400">
-      <h3>AI-Powered Solutions</h3>
-      <p>Innovative Machine Learning models, automation bots, predictive analytics, and next-gen AI strategy deployment.</p>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="500">
-      <h3>Startup Growth Consulting</h3>
-      <p>Leverage my entrepreneurship leadership experience to fast-track business innovation, funding readiness, and market positioning.</p>
-    </div>
-  </div>
-  <!-- Chatbot -->
-<div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-  <button id="toggle-chat" style="padding: 1rem; border-radius: 50%; background: #3b82f6; color: white; border: none;">💬</button>
-  <div id="chat-box" style="display: none; width: 300px; max-height: 400px; background: #1e293b; color: white; border-radius: 1rem; padding: 1rem; overflow-y: auto; margin-top: 1rem;">
-    <div id="chat-messages" style="margin-bottom: 1rem;"></div>
-    <input id="user-input" type="text" placeholder="Ask me anything..." style="width: 100%; padding: 0.5rem; border-radius: 0.5rem; border: none;">
-  </div>
-</div>
-
-</section>
-
-<section id="why">
-  <h2 data-aos="fade-up">Why Choose Me?</h2>
-  <div class="features-grid">
-    <div class="feature" data-aos="fade-up" data-aos-delay="100">
-      <h3>24-Hour Delivery</h3>
-      <p>Launch-ready delivery within a day, no excuses.</p>
-    </div>
-    <div class="feature" data-aos="fade-up" data-aos-delay="200">
-      <h3>Unlimited Minor Revisions</h3>
-      <p>I'll tweak until you're fully satisfied.</p>
-    </div>
-    <div class="feature" data-aos="fade-up" data-aos-delay="300">
-      <h3>AI + Human Collaboration</h3>
-      <p>Smart automation + expert craftsmanship.</p>
-    </div>
-    <div class="feature" data-aos="fade-up" data-aos-delay="400">
-      <h3>Affordable Pricing</h3>
-      <p>Starting at just $500. Premium quality, lean pricing.</p>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">2<span class="unit">+</span></div>
+        <div class="stat-label">Startups Founded</div>
+      </div>
+      <div>
+        <div class="stat-num">33<span class="unit">+</span></div>
+        <div class="stat-label">GitHub Repos</div>
+      </div>
+      <div>
+        <div class="stat-num">AWS</div>
+        <div class="stat-label">Cloud Practitioner</div>
+      </div>
+      <div>
+        <div class="stat-num">Pune</div>
+        <div class="stat-label">Based in India</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="build">
-  <h2 data-aos="fade-up">What I Can Build for You</h2>
-  <div class="features-grid">
-    <div class="feature" data-aos="fade-up" data-aos-delay="100">Killer Landing Pages</div>
-    <div class="feature" data-aos="fade-up" data-aos-delay="200">Email Automation Systems</div>
-    <div class="feature" data-aos="fade-up" data-aos-delay="300">Brand Copy & Funnel Content</div>
-    <div class="feature" data-aos="fade-up" data-aos-delay="400">Custom Lead Gen Systems</div>
-    <div class="feature" data-aos="fade-up" data-aos-delay="500">Web Apps Development</div>
-    <div class="feature" data-aos="fade-up" data-aos-delay="600">Mobile Applications (Android & iOS)</div>
-    <div class="feature" data-aos="fade-up" data-aos-delay="700">All Types of Automation Bots</div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">About</div>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <h2 class="section-title">Farmer.<br />Builder at heart.</h2>
+      <div class="divider"></div>
+      <p>
+        I grew up in <strong>Shrigonda, Ahmednagar</strong> — surrounded by crops, seasons, and the silent uncertainty that every farming family knows. That background isn't just backstory; it's the reason I'm building <span class="hl">Krishidnya</span>.
+      </p>
+      <p>
+        Today I'm a <strong>founder-engineer</strong> pursuing my M.Sc. in Computer Science at BVDU's Yashwantrao Mohite College in Pune. I build full-stack AI systems, architect serverless backends on AWS, and do freelance engineering for global clients.
+      </p>
+      <p>
+        When I'm not writing code or pitching investors, I'm chasing roads on my <span class="hl">RE Classic 350</span> or <strong>hunting bugs on Bugcrowd</strong>. Security isn't just a job title for me — it's the lens through which I look at every system I build.
+      </p>
+      <div style="margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="mailto:tejasbarguje9@gmail.com" class="btn btn-primary" style="font-size:13px; padding:10px 22px;">Get in touch</a>
+        <a href="https://github.com/tejasbargujepatil" target="_blank" rel="noopener" class="btn btn-ghost" style="font-size:13px; padding:10px 22px;">View GitHub →</a>
+      </div>
+    </div>
+    <div class="about-facts reveal">
+      <div class="fact-row">
+        <div class="fact-icon">🎓</div>
+        <div class="fact-body">
+          <div class="fact-title">M.Sc. Computer Science</div>
+          <div class="fact-detail">BVDU Yashwantrao Mohite College, Pune · Expected 2027</div>
+        </div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-icon">🌾</div>
+        <div class="fact-body">
+          <div class="fact-title">Roots in Agriculture</div>
+          <div class="fact-detail">From Shrigonda, Ahmednagar — farming family background</div>
+        </div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-icon">🔐</div>
+        <div class="fact-body">
+          <div class="fact-title">Certified Cybersecurity Engineer</div>
+          <div class="fact-detail">Google Certified · Bugcrowd Bug Bounty Hunter</div>
+        </div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-icon">☁️</div>
+        <div class="fact-body">
+          <div class="fact-title">AWS Cloud Practitioner</div>
+          <div class="fact-detail">Serverless · Lambda · API Gateway · DynamoDB · ap-south-1</div>
+        </div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-icon">🏍️</div>
+        <div class="fact-body">
+          <div class="fact-title">Motorcycle Rider</div>
+          <div class="fact-detail">KTM 390 ADV · Royal Enfield Himalayan · Dominar 400 · Classic 350</div>
+        </div>
+      </div>
+      <div class="fact-row">
+        <div class="fact-icon">🌐</div>
+        <div class="fact-body">
+          <div class="fact-title">Organizer, Cloud Native Day Pune 2026</div>
+          <div class="fact-detail">CNCF × Vultr · JW Marriott, Pune</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="testimonials">
-  <h2 data-aos="fade-up">Happy Clients</h2>
-  <blockquote data-aos="fade-up">
-    "Worked with 20+ entrepreneurs to create fast-turnaround projects. Always delivering results above expectations."
-  </blockquote>
+<!-- STARTUPS -->
+<section id="startups">
+  <div class="section-label">Ventures</div>
+  <h2 class="section-title reveal">Building things<br />that matter.</h2>
+  <p class="section-sub reveal">Two startups at the intersection of AI, agriculture, and healthcare — solving real problems for underserved markets in India.</p>
+
+  <div class="startups-grid">
+
+    <!-- Krishidnya — featured -->
+    <div class="startup-card featured reveal">
+      <div class="startup-inner">
+        <div>
+          <span class="startup-emoji">🌱</span>
+          <div class="startup-name">Krishidnya Innovations</div>
+          <div class="startup-type">AgriTech · AI/ML · IoT · Founder</div>
+          <div class="startup-desc">
+            An AI-powered smart farming ecosystem built for Indian farmers. CropDoc provides ML-based crop disease detection, soil intelligence, and real-time weather alerts — all accessible via mobile. Backed by IoT sensors and a FastAPI + Flutter stack deployed on AWS.
+            <br /><br />
+            Seed round: ₹30L target. Co-founders: Rohan Bhoyar (IoT/Robotics), Abhijit Abuj (Marketing), Rushikesh Pawar (Web/Blockchain).
+          </div>
+          <div class="startup-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">AWS</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">DynamoDB</span>
+            <span class="tag">IoT</span>
+          </div>
+        </div>
+        <div style="background: rgba(168,255,62,0.04); border: 1px solid var(--border); border-radius: 10px; padding: 28px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--lime); margin-bottom:16px; letter-spacing:0.1em;">CROPPULSE SYSTEM</div>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="background:rgba(255,255,255,0.04); border-radius:6px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:13px; color:var(--muted);">Disease Detection</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--lime);">ML Model ✓</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.04); border-radius:6px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:13px; color:var(--muted);">Soil Intelligence</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--lime);">IoT + API ✓</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.04); border-radius:6px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:13px; color:var(--muted);">Early Warning Alerts</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--lime);">SNS Live ✓</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.04); border-radius:6px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:13px; color:var(--muted);">Farmer Mobile App</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--lime-dim);">Flutter Beta</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SwasthyAI -->
+    <div class="startup-card reveal">
+      <span class="startup-emoji">🏥</span>
+      <div class="startup-name">SwasthyAI</div>
+      <div class="startup-type">HealthTech · AI · SaaS · Founder</div>
+      <div class="startup-desc">
+        AI-powered healthcare platform targeting Tier 2/3 Indian hospitals. B2B SaaS with ABDM/ABHA compliance at the core. Competitive analysis and go-to-market strategy anchored around hospital SaaS as the entry point.
+      </div>
+      <div class="startup-tags">
+        <span class="tag">HealthTech</span>
+        <span class="tag">ABDM/ABHA</span>
+        <span class="tag">B2B SaaS</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">AWS</span>
+      </div>
+    </div>
+
+    <!-- HelioScopeAI -->
+    <div class="startup-card reveal">
+      <span class="startup-emoji">☀️</span>
+      <div class="startup-name">HelioScopeAI</div>
+      <div class="startup-type">GreenTech · Energy · Open Source</div>
+      <div class="startup-desc">
+        A green energy intelligence platform. Analyzes solar potential, energy efficiency, and sustainability metrics. Built with JavaScript and open-sourced on GitHub.
+      </div>
+      <div class="startup-tags">
+        <span class="tag">JavaScript</span>
+        <span class="tag">Solar</span>
+        <span class="tag">Green Energy</span>
+        <span class="tag">Open Source</span>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- Add this after Testimonials section and before Claim section -->
+<!-- PROJECTS -->
 <section id="projects">
-  <h2 data-aos="fade-up">My Recent Work</h2>
-  <div class="projects-grid">
+  <div class="section-label">Projects</div>
+  <h2 class="section-title reveal">Things I've built.</h2>
+  <p class="section-sub reveal">Open-source tools, security scripts, and AWS experiments — all on GitHub.</p>
 
-    <!-- Remote Accident Alert System -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-      <div class="project-image">
-        <img src="https://www.hashstudioz.com/blog/wp-content/uploads/2024/04/Automatic-Vehicle-Accident-Detection-And-Rescue-System.webp" alt="Remote Accident Alert System">
+  <div class="projects-list">
+    <a class="project-row reveal" href="https://github.com/tejasbargujepatil/Web-Security-Scripts" target="_blank" rel="noopener">
+      <div class="project-num">01</div>
+      <div class="project-info">
+        <div class="project-name">Web Security Scripts</div>
+        <div class="project-brief">Curated Python scripts for website vulnerability scanning and web security automation</div>
       </div>
-      <div class="project-content">
-        <h3>Remote Accident Alert System</h3>
-        <p>Communication solution for remote zones without network, sending instant alerts to hospitals and police in case of accidents.</p>
-        <div class="project-tags">
-          <span>IoT</span>
-          <span>Embedded Systems</span>
-          <span>Python</span>
-          <span>LoRa</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Farmovate -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="150">
-      <div class="project-image">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5J4pl95lFBjxCt-mQvkvpPIbk1nIJa3Edrw&s" alt="Farmovate">
-      </div>
-      <div class="project-content">
-        <h3>Farmovate</h3>
-        <p>Smart agriculture platform using sensors and IoT to monitor soil, crop, and weather data in real-time.</p>
-        <div class="project-tags">
-          <span>IoT</span>
-          <span>AgriTech</span>
-          <span>GenAI</span>
-          <span>Python</span>
-          <span>React</span>
-          <span>API</span>
-          <span>React-Native</span>
-          <span>Git</span>
-          <span>GitHub</span>
-          <span>Typescript</span>
-          
-        </div>
-      </div>
-    </div>
-
-    <!-- Agrobuddy -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-      <div class="project-image">
-        <img src="https://play-lh.googleusercontent.com/1rdbL4-H6U-GAIxFtaGWB9UQaj6JbsPFIU84daCyaQPEdqptB-g93p2GvhZqrQcAcyU" alt="Agrobuddy">
-      </div>
-      <div class="project-content">
-        <h3>Agrobuddy</h3>
-        <p>AI-based chatbot and app helping farmers with crop selection, weather prediction, and government scheme info.</p>
-        <div class="project-tags">
-          <span>GenAI</span>
-          <span>Chatbot</span>
-          <span>Machine Learning</span>
-          <span>Python</span>
-          <span>NLP</span>
-          <span>AWS</span>
-           <span>Git</span>
-          <span>GitHub</span>
-        </div>
-         <a href="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/02/05/18/20250205180409-ECKAVYIS.json" target="_blank" class="view-project-btn">
-      💬 Chat With AgroBuddy
+      <div class="project-stack"><span class="stack-badge">Python</span><span class="stack-badge">Security</span></div>
     </a>
+    <a class="project-row reveal" href="https://github.com/tejasbargujepatil/MalwareGuard" target="_blank" rel="noopener">
+      <div class="project-num">02</div>
+      <div class="project-info">
+        <div class="project-name">MalwareGuard</div>
+        <div class="project-brief">ML-powered real-time malware detection with automatic quarantine using Python</div>
       </div>
-    </div>
-
-    <!-- XchangeHub -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="250">
-      <div class="project-image">
-        <img src="https://www.exterro.com/uploads/transformed/_687x472_fit_center-center_90_none/xchange-generic-logo.png" alt="XchangeHub">
-      </div>
-      <div class="project-content">
-        <h3>XchangeHub</h3>
-        <p>Marketplace platform for college students to Exchange/Trade Skills, gadgets, and services with eachother.</p>
-        <div class="project-tags">
-          <span>React-Native</span>
-          <span>MySQL</span>
-          <span>Java</span>
-          <span>Express Js</span>
-          <span>Bootstrap</span>
-           <span>Git</span>
-          <span>GitHub</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Attendosync -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-      <div class="project-image">
-        <img src="https://media.istockphoto.com/id/1406468093/vector/attendance-presence.jpg?s=612x612&w=0&k=20&c=KAr71OSoDs9_fttWWIVnkPDwAk0ww55DdX3kvuqRiQg=" alt="Attendosync">
-      </div>
-      <div class="project-content">
-        <h3>Attendosync</h3>
-        <p>Employee attendance and payroll system with RFID integration and real-time data syncing to the cloud.</p>
-        <div class="project-tags">
-          <span>Java</span>
-          <span>Angular</span>
-          <span>Typescript</span>
-          <span>Spring Boot</span>
-          <span>Firebase</span>
-          <span>Firestore</span>
-           <span>Git</span>
-          <span>GitHub</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Keylogger -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="350">
-      <div class="project-image">
-        <img src="https://f.hubspotusercontent40.net/hubfs/4650993/Blog_Content/Avg/Signal/AVG%20Signal%20Images/Keyloggers%20What%20They%20Are/What_is_a_Keylogger-Thumb.jpg" alt="Keylogger">
-      </div>
-      <div class="project-content">
-        <h3>Keylogger</h3>
-        <p>Python-based keylogger for educational purposes, recording keystrokes and activity logs with encryption.</p>
-        <div class="project-tags">
-          <span>Python</span>
-          <span>Flask</span>
-          <span>Cybersecurity</span>
-           <span>Git</span>
-          <span>GitHub</span>
-          <span>Encryption</span>
-        </div>
-         <a href="https://github.com/tejasbargujepatil/Keylogger target="_blank" class="view-project-btn">
-        🔥 View Project
+      <div class="project-stack"><span class="stack-badge">Python</span><span class="stack-badge">ML</span></div>
     </a>
+    <a class="project-row reveal" href="https://github.com/tejasbargujepatil/JS_Scan" target="_blank" rel="noopener">
+      <div class="project-num">03</div>
+      <div class="project-info">
+        <div class="project-name">JS_Scan</div>
+        <div class="project-brief">Toolkit to extract and scan JavaScript files for sensitive data leakage</div>
       </div>
-    </div>
-
-    <!-- Dorkhunt -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-      <div class="project-image">
-        <img src="https://miro.medium.com/v2/resize:fit:573/1*e90Pqw1u4GyOO5BInXx0gQ.png" alt="Dorkhunt">
-      </div>
-      <div class="project-content">
-        <h3>Dorkhunt</h3>
-        <p>AI-based Google Dorking tool that automates finding vulnerable URLs and documents across the web.</p>
-        <div class="project-tags">
-          <span>AI</span>
-          <span>Python</span>
-           <span>Tensorflow</span>
-          <span>Automation</span>
-           <span>Git</span>
-          <span>GitHub</span>
-        </div>
-         <a href="https://github.com/tejasbargujepatil/DorkHunt" target="_blank" class="view-project-btn">
-        🔥 View Project
+      <div class="project-stack"><span class="stack-badge">Python</span><span class="stack-badge">OSINT</span></div>
     </a>
+    <a class="project-row reveal" href="https://github.com/tejasbargujepatil/Vultr-x-OpenClaw-Workshop" target="_blank" rel="noopener">
+      <div class="project-num">04</div>
+      <div class="project-info">
+        <div class="project-name">Vultr × OpenClaw Workshop</div>
+        <div class="project-brief">Workshop materials for deploying and exploring OpenClaw on Vultr cloud — Cloud Native Day Pune 2026</div>
       </div>
-    </div>
-
-    <!-- StealthBreach -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="450">
-      <div class="project-image">
-        <img src="https://www.intelligentciso.com/wp-content/uploads/sites/6/2024/05/AdobeStock_753143067-w.jpg" alt="StealthBreach">
-      </div>
-      <div class="project-content">
-        <h3>StealthBreach</h3>
-        <p>Ethical hacking toolset for penetration testing including payload generators and bypass techniques.</p>
-        <div class="project-tags">
-          <span>Security</span>
-          <span>Linux</span>
-          <span>Batch Scripting</span>
-           <span>Git</span>
-          <span>GitHub</span>
-          
-          <span>Python</span>
-        </div>
-         </div>
-         <a href="https://github.com/tejasbargujepatil/StealthBreach" target="_blank" class="view-project-btn">
-        🔥 View Project
+      <div class="project-stack"><span class="stack-badge">Cloud</span><span class="stack-badge">DevOps</span></div>
     </a>
+    <a class="project-row reveal" href="https://github.com/tejasbargujepatil/HelioScopeAI" target="_blank" rel="noopener">
+      <div class="project-num">05</div>
+      <div class="project-info">
+        <div class="project-name">HelioScopeAI</div>
+        <div class="project-brief">Green energy platform — solar potential analysis and sustainability intelligence</div>
       </div>
-    </div>
-
-    <!-- FileFort -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-      <div class="project-image">
-        <img src="https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2022/09/30114658/sl-abstract-magnifier-search-analysis.jpg" alt="FileFort">
-      </div>
-      <div class="project-content">
-        <h3>FileFort</h3>
-        <p>Security tool to extract and enrich Indicators of Compromise (IOCs) like hashes, URLs, and IPs from files, with VirusTotal integration.</p>
-        <div class="project-tags">
-          <span>Python</span> <span>Git</span>
-          <span>GitHub</span>
-          <span>Threat Intel</span>
-          <span>Shell Scripting</span>
-          <span>VirusTotal API</span>
-          
-        </div>
-         <a href="https://github.com/tejasbargujepatil/FileFort" target="_blank" class="view-project-btn">
-        🔥 View Project
+      <div class="project-stack"><span class="stack-badge">JavaScript</span><span class="stack-badge">GreenTech</span></div>
     </a>
+    <a class="project-row reveal" href="https://github.com/tejasbargujepatil" target="_blank" rel="noopener">
+      <div class="project-num">→</div>
+      <div class="project-info">
+        <div class="project-name">+28 more on GitHub</div>
+        <div class="project-brief">AWS Lambda pipelines, DynamoDB CRUD, EC2 automation, Rekognition, Polly, SNS, and more</div>
       </div>
-    </div>
-
-    <!-- E-Commerce Platform -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="550">
-      <div class="project-image">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPE9VD7hC5m5iUcMPpHnJWJj37QdoVWgzLsg&s" alt="E-Commerce Platform">
-      </div>
-      <div class="project-content">
-        <h3>E-Commerce Platform</h3>
-        <p>Built a full-stack e-commerce solution with React, Node.js, and MongoDB handling 10k+ daily transactions.</p>
-        <div class="project-tags">
-          <span>React</span>
-          <span>Node.js</span>
-          <span>MongoDB</span>
-           <span>Git</span>
-          <span>GitHub</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Security Dashboard -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-      <div class="project-image">
-        <img src="https://www.slideteam.net/wp/wp-content/uploads/2022/12/Cybersecurity-Dashboard-with-Risk-and-Compliance.png" alt="Security Dashboard">
-      </div>
-      <div class="project-content">
-        <h3>Security Dashboard</h3>
-        <p>Enterprise-level cybersecurity monitoring system with real-time threat detection and analytics.</p>
-        <div class="project-tags">
-          <span>Python</span>
-          <span>SIEM</span>
-          <span>AWS</span>
-           <span>Git</span>
-          <span>GitHub</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- AI Chatbot System -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="650">
-      <div class="project-image">
-        <img src="https://miro.medium.com/v2/resize:fit:1024/1*JKug6lwi5bPyDBiSlv5ipg.png" alt="AI Chatbot System">
-      </div>
-      <div class="project-content">
-        <h3>AI Chatbot System For Agricultural Use</h3>
-        <p>Natural Language Processing chatbot that reduced customer service response time by 65%.</p>
-        <div class="project-tags">
-          <span>Python</span>
-          <span>NLP</span>
-          <span>TensorFlow</span>
-        </div>
-        <a href="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/02/05/18/20250205180409-ECKAVYIS.json" target="_blank" class="view-project-btn">
-      💬 Chat With AgroBuddy
+      <div class="project-stack"><span class="stack-badge">View All</span></div>
     </a>
-      </div>
-    </div>
-
-    <!-- College ERP System -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="700">
-      <div class="project-image">
-        <img src="https://img.freepik.com/premium-vector/chat-bot-logo-design-concept-virtual-smart-assistant-bot-icon-robot-head-with-speech-bubble_418020-502.jpg?semt=ais_hybrid&w=740" alt="College ERP System">
-      </div>
-      <div class="project-content">
-        <h3>College ERP System</h3>
-        <p>All-in-one academic management system for staff, student, exam, and attendance management.</p>
-        <div class="project-tags">
-          <span>Angular</span>
-          <span>MySQL</span>
-          <span>Java</span>
-          <span>Bootstrap</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Website -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="750">
-      <div class="project-image">
-        <img src="https://logopond.com/logos/5700fabdf91fa0f2322c2540e609956c.png" alt="Portfolio Website">
-      </div>
-      <div class="project-content">
-        <h3>Portfolio Website</h3>
-        <p>Responsive personal website showcasing skills, resume, certifications, blogs, and projects.</p>
-        <div class="project-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-        <a href="https://tejasbargujepatilcom.vercel.app/" target="_blank" class="view-project-btn">
-      🔥 View Portfolio
-    </a>
-      </div>
-    </div>
-
-    <!-- PHP-Java Integrated System -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="800">
-      <div class="project-image">
-        <img src="https://cdn.comparitech.com/wp-content/uploads/2020/03/Atera-Dashboard.jpg" alt="PHP-Java Integrated System">
-      </div>
-      <div class="project-content">
-        <h3>PHP-Java Integrated System</h3>
-        <p>Cross-platform system combining Java backend with PHP frontend to streamline operations and reduce latency.</p>
-        <div class="project-tags">
-          <span>Java</span>
-          <span>PHP</span>
-          <span>Integration</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ML-based Recommendation System -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="850">
-      <div class="project-image">
-        <img src="https://emeritus.org/in/wp-content/uploads/sites/3/2023/03/types-of-machine-learning.jpg.optimal.jpg" alt="Recommendation System">
-      </div>
-      <div class="project-content">
-        <h3>ML-Based Recommendation System</h3>
-        <p>Used Pandas and scikit-learn to create a movie recommendation engine based on user preferences.</p>
-        <div class="project-tags">
-          <span>Python</span>
-          <span>ML</span>
-          <span>scikit-learn</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Rally Automation Project -->
-<div class="project-card" data-aos="fade-up" data-aos-delay="1000">
-  <div class="project-image">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGmrgOwIahKUfS25x1ixNhkjwRS6FRIYVyZw&s" alt="Rally Automation Project">
-  </div>
-  <div class="project-content">
-    <h3>Rally Automation System</h3>
-    <p>End-to-end automated framework using Playwright, TypeScript, and Cucumber.js to streamline Rally test management — enabling real-time story pulls and test uploads with cloud efficiency.</p>
-    <div class="project-tags">
-      <span>TypeScript</span>
-      <span>Playwright</span>
-      <span>Cucumber.js</span>
-      <span>Automation</span>
-    </div>
-    <a href="https://github.com/tejasbargujepatil/rally-automation" target="_blank" class="view-project-btn">
-      🔥 View Project
-    </a>
-  </div>
-</div>
-
-
   </div>
 </section>
 
-<section id="claim">
-  <h2 data-aos="fade-up">Claim Your Spot Now</h2>
-  <div class="cta">
-    <div class="card" data-aos="fade-up">
-      <h3>Book a Free Consultation</h3>
-      <p>Limited slots available per week. Reserve yours now and get ready to launch your idea in 24 hours!</p>
-      <a href="#calendar" class="btn">Schedule a Meeting</a>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">Tech Stack</div>
+  <h2 class="section-title reveal">Tools of the trade.</h2>
+  <div class="skills-grid">
+    <div class="skill-group reveal">
+      <div class="skill-group-name">Languages</div>
+      <div class="skill-chips">
+        <span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span>
+        <span class="chip">TypeScript</span><span class="chip">Dart</span><span class="chip">HTML/CSS</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-name">Cloud · AWS</div>
+      <div class="skill-chips">
+        <span class="chip">Lambda</span><span class="chip">API Gateway</span><span class="chip">DynamoDB</span>
+        <span class="chip">S3</span><span class="chip">EC2 / ALB</span><span class="chip">Rekognition</span>
+        <span class="chip">Polly</span><span class="chip">SNS</span><span class="chip">RDS MySQL</span>
+        <span class="chip">CloudWatch</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-name">Frameworks</div>
+      <div class="skill-chips">
+        <span class="chip">FastAPI</span><span class="chip">Flutter</span><span class="chip">Spring Boot</span>
+        <span class="chip">Angular</span><span class="chip">Node.js</span><span class="chip">Docker</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-name">AI · ML</div>
+      <div class="skill-chips">
+        <span class="chip">PyTorch</span><span class="chip">Scikit-learn</span><span class="chip">TensorFlow</span>
+        <span class="chip">Crop Disease CNN</span><span class="chip">Yield Prediction</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-name">Security</div>
+      <div class="skill-chips">
+        <span class="chip">Penetration Testing</span><span class="chip">Bug Bounty</span>
+        <span class="chip">Web Security</span><span class="chip">Malware Analysis</span>
+        <span class="chip">OSINT</span><span class="chip">Bugcrowd</span>
+      </div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-name">Databases</div>
+      <div class="skill-chips">
+        <span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">DynamoDB</span>
+        <span class="chip">MongoDB</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- New Calendar Section -->
-<section id="calendar" style="margin-top: 4rem;">
-  <h2 data-aos="fade-up">Schedule a Meeting</h2>
-  <div data-aos="fade-up" style="margin-top: 2rem;">
-    <div class="calendly-inline-widget" data-url="https://calendly.com/tejasbarguje272/30min" style="min-width:320px;height:700px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- CERTIFICATIONS -->
+<section id="certs" style="padding-top:0; padding-bottom:80px;">
+  <div class="section-label">Credentials</div>
+  <h2 class="section-title reveal" style="margin-bottom:40px;">Certifications.</h2>
+  <div class="certs-grid">
+    <div class="cert-card reveal">
+      <div class="cert-icon">🔐</div>
+      <div>
+        <div class="cert-name">Google Certified Cybersecurity Engineer</div>
+        <div class="cert-issuer">Google</div>
+      </div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-icon">☁️</div>
+      <div>
+        <div class="cert-name">AWS Cloud Practitioner</div>
+        <div class="cert-issuer">Amazon Web Services · In Progress</div>
+      </div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-icon">💻</div>
+      <div>
+        <div class="cert-name">Full Stack Java Developer</div>
+        <div class="cert-issuer">Capgemini × Symbiosis</div>
+      </div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-icon">🐛</div>
+      <div>
+        <div class="cert-name">Bug Bounty Hunter</div>
+        <div class="cert-issuer">Bugcrowd Platform · Active</div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-label" style="text-align:center; display:block;">Contact</div>
+    <h2 class="section-title reveal" style="text-align:center;">Let's build<br />something together.</h2>
+    <p style="color:var(--muted); font-size:16px; line-height:1.7; margin-bottom:0;" class="reveal">
+      Open to collaborations, freelance engineering, investment conversations, and coffee over cloud architecture.
+    </p>
+    <a href="mailto:tejasbarguje9@gmail.com" class="contact-email reveal">tejasbarguje9@gmail.com</a>
+    <div class="social-links reveal">
+      <a href="https://www.linkedin.com/in/tejasbarguje/" target="_blank" rel="noopener" class="social-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/tejasbargujepatil" target="_blank" rel="noopener" class="social-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+      <a href="https://x.com/tejas_barguje" target="_blank" rel="noopener" class="social-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        Twitter / X
+      </a>
+      <a href="https://instagram.com/tejas_barguje_patil" target="_blank" rel="noopener" class="social-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162S8.597 18.163 12 18.163s6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-
-  <div class="social-links">
-    <a href="https://github.com/tejasbargujepatil" target="_blank" aria-label="GitHub">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="https://x.com/tejas_barguje" target="_blank" aria-label="X">
-      <i class="fab fa-x-twitter"></i>
-    </a>
-    <a href="https://instagram.com/tejas_barguje_patil" target="_blank" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://wa.me/918087147136" target="_blank" aria-label="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-  </div>
-  <p>&copy; 2025 Tejas Barguje. Powered by Passion + Precision.</p>
+  <div class="footer-copy">© 2026 Tejas Barguje Patil</div>
+  <div class="footer-made">Hosted on <span>AWS S3</span> · Built with purpose</div>
 </footer>
 
+<script>
+  // Typewriter effect
+  const phrases = [
+    "Founder. Hacker. Farmer's Son.",
+    "Building AI for Indian farmers.",
+    "Breaking systems. Ethically.",
+    "Architecting on AWS ap-south-1.",
+    "M.Sc. CS @ BVDU Pune.",
+  ];
+  let phraseIdx = 0, charIdx = 0, deleting = false;
+  const el = document.getElementById('typewriter');
 
- <!-- AOS Script -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  function type() {
+    const current = phrases[phraseIdx];
+    if (!deleting) {
+      el.textContent = current.slice(0, ++charIdx);
+      if (charIdx === current.length) { deleting = true; setTimeout(type, 2200); return; }
+    } else {
+      el.textContent = current.slice(0, --charIdx);
+      if (charIdx === 0) { deleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; }
+    }
+    setTimeout(type, deleting ? 40 : 60);
+  }
+  type();
 
-  <!-- Chatbot Script -->
-  <script>
-    const skills = {
-      "web development": "I specialize in modern, high-performance websites using the latest stacks.",
-      "cybersecurity": "I offer security audits and vulnerability scans to keep your systems safe.",
-      "ai": "I build AI-powered tools like chatbots, predictive models, and automation solutions.",
-      "automation": "I create bots that automate daily tasks, from lead gen to workflow management.",
-      "startup consulting": "I help founders with business planning, MVP launches, and GTM strategies.",
-      "funnels": "I build high-converting funnels and landing pages tailored to your niche."
-    };
-
-    const messagesDiv = document.getElementById('chat-messages');
-    const userInput = document.getElementById('user-input');
-    const chatBox = document.getElementById('chat-box');
-    const toggleBtn = document.getElementById('toggle-chat');
-
-    toggleBtn.addEventListener('click', () => {
-      chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
-    });
-
-    userInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        const query = userInput.value.toLowerCase();
-        messagesDiv.innerHTML += `<p><strong>You:</strong> ${query}</p>`;
-        let matched = false;
-
-        for (const key in skills) {
-          if (query.includes(key)) {
-            messagesDiv.innerHTML += `<p><strong>TejasBot:</strong> ${skills[key]}</p>`;
-            matched = true;
-            break;
-          }
-        }
-
-        if (!matched) {
-          messagesDiv.innerHTML += `<p><strong>TejasBot:</strong> I'm not sure about that. You can <a href="https://wa.me/918087147136" target="_blank" style="color: #3b82f6;">chat with me on WhatsApp</a> for a detailed answer.</p>`;
-        }
-
-        userInput.value = '';
-        chatBox.scrollTop = chatBox.scrollHeight;
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 60);
+        obs.unobserve(e.target);
       }
     });
-  </script>
-
-  <!-- AOS Initialization -->
-  <script>
-    AOS.init({
-      once: true
-    });
-  </script>
-
+  }, { threshold: 0.1 });
+  reveals.forEach(r => obs.observe(r));
+</script>
 </body>
 </html>
